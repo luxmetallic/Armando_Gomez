@@ -126,7 +126,7 @@
     .pic img {
       max-width: 80%;
       height: auto;
-      margin-right: 0.5px; /* Add some spacing between the picture and text */
+      margin-right: 0.1px; /* Add some spacing between the picture and text */
       text-align: left;
     }
 
@@ -162,7 +162,8 @@
     var whatsappNumber = "+971502783808";
     var email = "ceo@imz-holding.com";
     var companyName = "IMZ HOLDING ";
-
+    var address = "City Walk building 20 , Office 3 and 4 Groundfloor"; // Replace this with the actual address
+    var mapUrl = "https://maps.app.goo.gl/2zpmadRThpxYYZBf7" + encodeURIComponent(address);
 
     var vCard = `BEGIN:VCARD
 VERSION:3.0
@@ -171,6 +172,8 @@ ORG:${companyName}
 TEL;TYPE=CELL:${phoneNumber1}
 TEL;TYPE=WHATSAPP:${whatsappNumber}
 EMAIL:${email}
+ADR;TYPE=WORK:;;${address}
+URL:${mapUrl}
 END:VCARD`;
 
     var dataUrl = "data:text/vcard;charset=utf-8," + encodeURIComponent(vCard);
@@ -193,7 +196,7 @@ END:VCARD`;
   <div class="social-icons-container">
     <a href="https://wa.link/9xy03j"><img src="whatsapp.png" alt="WhatsApp"></a>
     <a href="mailto:ceo@imz-holding.com"><img src="mail.png" alt="Email"></a>
-    <a href="Please Confirm your location"<img src="loc.png" alt="location"></a>
+    <a href="https://maps.app.goo.gl/2zpmadRThpxYYZBf7"><img src="loc.png" alt="location"></a>
   </div>
 
   <div class="save-contact">
