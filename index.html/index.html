@@ -162,7 +162,8 @@
     var whatsappNumber = "+971502783808";
     var email = "ceo@imz-holding.com";
     var companyName = "IMZ HOLDING ";
-
+    var address = "City Walk building 20 , Office 3 and 4 Groundfloor"; // Replace this with the actual address
+    var mapUrl = "https://maps.app.goo.gl/2zpmadRThpxYYZBf7" + encodeURIComponent(address);
 
     var vCard = `BEGIN:VCARD
 VERSION:3.0
@@ -171,6 +172,8 @@ ORG:${companyName}
 TEL;TYPE=CELL:${phoneNumber1}
 TEL;TYPE=WHATSAPP:${whatsappNumber}
 EMAIL:${email}
+ADR;TYPE=WORK:;;${address}
+URL:${mapUrl}
 END:VCARD`;
 
     var dataUrl = "data:text/vcard;charset=utf-8," + encodeURIComponent(vCard);
